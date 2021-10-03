@@ -47,7 +47,7 @@ const InputContainer = ({ setBill, setPerson }) => {
       </BtnWrapper>
 
       <Labels>number of people</Labels>
-      <Inputs inputProp={{ onChange, value }} setPerson={setPerson} />
+      <Inputs setPerson={setPerson} />
     </InputWrapper>
   );
 };
