@@ -15,17 +15,34 @@ const CardContainer = styled.div`
   margin-top: 3rem;
   display: flex;
 `;
+
 const Card = () => {
   const [Bill, setBill] = useState(0);
   const [Person, setPerson] = useState(1); // for second input
 
-  console.log(Bill);
-  console.log(Person);
+  const [btnVal, setBtnVal] = useState(0);
+
+  let total = Bill / Person;
+  let dec = btnVal / 100;
+
+  let tip = dec * total;
+  let ans = total + tip;
+
+  const reset = () => setBill(0) && setPerson(1);
 
   return (
     <CardContainer>
-      <InputContainer setBill={setBill} setPerson={setPerson} />
-      <OutputContainer />
+      <InputContainer
+        Bill={Bill}
+        setBtnVal={setBtnVal}
+        setBill={setBill}
+        setPerson={setPerson}
+      />
+      <OutputContainer
+        reset={reset}
+        tip={tip.toFixed(2)}
+        ans={ans.toFixed(2)}
+      />
     </CardContainer>
   );
 };

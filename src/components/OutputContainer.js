@@ -40,7 +40,7 @@ const Amt = styled.p`
   color: #26c2ad;
 `;
 
-const OutputContainer = () => {
+const OutputContainer = ({ reset, tip, ans }) => {
   return (
     <OutputWrapper>
       <OutputLabels>
@@ -48,16 +48,16 @@ const OutputContainer = () => {
           <Title>tip amount</Title>
           <Disc>/person</Disc>
         </TitleDiv>
-        <Amt>$4.27</Amt>
+        <Amt>{tip}</Amt>
       </OutputLabels>
       <OutputLabels>
         <TitleDiv>
           <Title>total</Title>
           <Disc>/person</Disc>
         </TitleDiv>
-        <Amt>$32.72</Amt>
+        <Amt>{ans}</Amt>
       </OutputLabels>
-      <ResetBtn>RESET</ResetBtn>
+      <ResetBtn onClick={reset}>RESET</ResetBtn>
     </OutputWrapper>
   );
 };

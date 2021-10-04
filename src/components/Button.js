@@ -14,7 +14,7 @@ export const Button = styled.button`
   font-weight: 700;
   cursor: pointer;
 
-  :active,
+  :focus,
   :hover {
     background-color: #26c2ad;
     color: #00494d;
@@ -33,4 +33,9 @@ export const ResetBtn = styled(Button)`
   color: #00494d;
   font-size: 1rem;
   margin-top: 4.2rem;
+  transition: 300ms ease-in-out;
+
+  :active {
+    background-color: #2a8276;
+  }
 `;

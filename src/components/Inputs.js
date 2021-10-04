@@ -49,7 +49,9 @@ const Input = styled.input`
   }
 `;
 
-const Inputs = ({ icon, setBill, setPerson, inputProps }) => {
+const Inputs = (props) => {
+  const { icon, setBill, setPerson, inputProps } = props;
+
   return (
     <InputDiv>
       <Image src={icon === "dollar" ? Dollar : Person} alt="icon" />

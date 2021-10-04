@@ -25,10 +25,11 @@ const BtnWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
-  /* border: 1px solid; */
 `;
 
-const InputContainer = ({ setBill, setPerson }) => {
+const InputContainer = ({ setBtnVal, setBill, setPerson }) => {
+  const setValues = (e) => setBtnVal(e.target.value);
+
   return (
     <InputWrapper>
       <Labels>bill</Labels>
@@ -36,13 +37,23 @@ const InputContainer = ({ setBill, setPerson }) => {
 
       <Labels>select tip %</Labels>
       <BtnWrapper>
-        <Button>5%</Button>
-        <Button>10%</Button>
-        <Button>15%</Button>
+        <Button value={5} onClick={setValues}>
+          5%
+        </Button>
+        <Button value={10} onClick={setValues}>
+          10%
+        </Button>
+        <Button value={15} onClick={setValues}>
+          15%
+        </Button>
       </BtnWrapper>
       <BtnWrapper>
-        <Button>25%</Button>
-        <Button>50%</Button>
+        <Button value={25} onClick={setValues}>
+          25%
+        </Button>
+        <Button value={50} onClick={setValues}>
+          50%
+        </Button>
         <CustomButton>Custom</CustomButton>
       </BtnWrapper>
 
