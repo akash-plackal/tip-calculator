@@ -48,14 +48,14 @@ const OutputContainer = ({ reset, tip, ans }) => {
           <Title>tip amount</Title>
           <Disc>/person</Disc>
         </TitleDiv>
-        <Amt>{tip}</Amt>
+        <Amt>{isNaN(tip) ? 0 : tip}</Amt>
       </OutputLabels>
       <OutputLabels>
         <TitleDiv>
           <Title>total</Title>
           <Disc>/person</Disc>
         </TitleDiv>
-        <Amt>{ans}</Amt>
+        <Amt>{isNaN(ans) ? 0 : ans}</Amt>
       </OutputLabels>
       <ResetBtn onClick={reset}>RESET</ResetBtn>
     </OutputWrapper>
