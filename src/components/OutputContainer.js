@@ -11,6 +11,11 @@ const OutputWrapper = styled.div`
   align-items: center;
   /* justify-content: space-around; */
   flex-direction: column;
+
+  @media (max-width: 500px) {
+    width: 90%;
+    margin: 0 auto;
+  }
 `;
 
 const OutputLabels = styled.div`
@@ -27,11 +32,19 @@ const Title = styled.p`
   text-transform: capitalize;
   font-weight: 700;
   font-size: 0.7rem;
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
 `;
 
 const Disc = styled.p`
   font-size: 0.7rem;
   color: #268576;
+
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const Amt = styled.p`

@@ -9,6 +9,11 @@ const InputWrapper = styled.div`
   width: 45%;
   margin: 1.5rem;
   margin-right: 5px;
+
+  @media (max-width: 500px) {
+    width: 90%;
+    margin: 1.3rem;
+  }
 `;
 
 const Labels = styled.label`
@@ -17,6 +22,10 @@ const Labels = styled.label`
   font-weight: 700;
   font-size: 0.8rem;
   margin-bottom: 10px;
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
 `;
 
 const BtnWrapper = styled.div`

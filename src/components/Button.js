@@ -19,6 +19,10 @@ export const Button = styled.button`
     background-color: #26c2ad;
     color: #00494d;
   }
+
+  @media (max-width: 500px) {
+    /* min-width: 40vw; */
+  }
 `;
 
 export const CustomButton = styled(Button)`
@@ -37,5 +41,10 @@ export const ResetBtn = styled(Button)`
 
   :active {
     background-color: #2a8276;
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
   }
 `;

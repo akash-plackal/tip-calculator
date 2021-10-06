@@ -14,6 +14,11 @@ const Image = styled.img`
   bottom: 15px;
   left: 10px;
   height: 1rem;
+
+  @media (max-width: 500px) {
+    bottom: 21px;
+    height: 1.2rem;
+  }
 `;
 
 const Input = styled.input`
@@ -46,6 +51,10 @@ const Input = styled.input`
 
   :focus {
     outline: 2px solid #26c0ab;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0.6rem 0.9rem;
   }
 `;
 

@@ -14,7 +14,34 @@ const CardContainer = styled.div`
   border-radius: 1.2rem;
   margin-top: 3rem;
   display: flex;
+
+  @media (max-width: 1100px) {
+    width: 65%;
+  }
+
+  @media (max-width: 970px) {
+    width: 70%;
+  }
+
+  @media (max-width: 870px) {
+    width: 80%;
+  }
+
+  @media (max-width: 670px) {
+    width: 90%;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.7rem;
+  }
 `;
+
+// =====================
 
 const Card = () => {
   const [Bill, setBill] = useState(0);

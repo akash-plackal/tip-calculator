@@ -12,11 +12,21 @@ const PageContainer = styled.div`
   height: 100vh;
   width: 100%;
   background-color: ${LightGrayishCyan};
+
+  @media (max-width: 500px) {
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
 `;
 
 const Title = styled.h2`
   letter-spacing: 0.4rem;
   color: ${VeryDarkCyan};
+
+  @media (max-width: 500px) {
+    font-size: 2rem;
+    letter-spacing: 0.6rem;
+  }
 `;
 
 const Page = () => {
